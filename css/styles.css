@@ -2,7 +2,27 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  font-family: var(--font-family);
 }
+
+:root {
+  --font-family: "Lato", sans-serif;
+  --vertical-line: rgb(134, 133, 133);
+  --color-light-purple: rgb(133, 126, 231);
+}
+/* Fonts -------------------------------------- */
+.bold {
+  font-weight: 500;
+}
+
+.light {
+  font-weight: 300;
+}
+.trade {
+  font-size: 24px;
+  font-weight: 200;
+}
+/* End Fonts -------------------------------------- */
 
 .grid-container {
   display: grid;
@@ -11,16 +31,60 @@
   grid-template-areas: "header" "navigation" "main";
 }
 
+/* Header -------------------------------------- */
 header {
   grid-area: header;
-  background-color: orange;
+  background-color: var(--color-light-purple);
+  color: white;
 }
 
+header h1 {
+  font-size: 24px;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  padding: 1em;
+}
+
+.bell-icon-container {
+  margin: 0 auto;
+  width: 15%;
+  padding-left: 20px;
+}
+
+.bell-icon {
+  fill: white;
+}
+
+header img {
+  width: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.vertical {
+  border-left: 1px solid rgb(190, 188, 188);
+  height: 40px;
+  margin-right: 5px;
+  margin-left: 10px;
+}
+
+.header-student {
+  display: flex;
+  align-items: center;
+}
+
+.header-student p {
+  font-size: 10px;
+}
+/* End Header -------------------------------------- */
 nav {
   grid-area: navigation;
   background-color: purple;
 }
-
+/*
 main {
   grid-area: main;
   background-color: pink;
@@ -87,7 +151,7 @@ main {
 }
 
 .daily {
-  background-color: orange;
+  background-color: var(--color-light-purple);
 }
 
 .mobile {
@@ -111,4 +175,4 @@ main {
 }
 .settings {
   background-color: lavenderblush;
-}
+} */
