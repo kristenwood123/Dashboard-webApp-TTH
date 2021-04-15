@@ -1,0 +1,114 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto;
+  grid-template-areas: "header" "navigation" "main";
+}
+
+header {
+  grid-area: header;
+  background-color: orange;
+}
+
+nav {
+  grid-area: navigation;
+  background-color: purple;
+}
+
+main {
+  grid-area: main;
+  background-color: pink;
+  display: grid;
+}
+
+.widget-container-full,
+.wdiget-container-half {
+  width: 95vw;
+}
+
+@media screen and (min-width: 768px) {
+  .grid-container {
+    grid-template-columns: 55px 1fr;
+    grid-template-areas:
+      "header header"
+      "navigation main";
+  }
+
+  main {
+    grid-template-columns: 50%;
+  }
+
+  .traffic,
+  .social-stats {
+    grid-column: 1 / span 2;
+  }
+
+  .members,
+  .message,
+  .activity,
+  .settings {
+    grid-column: 1 / span 2;
+  }
+
+  .widget-container-full {
+    width: 90vw;
+  }
+  .widget-container-half {
+    width: 45vw;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .social-stats {
+    grid-column: 1 / span 2;
+  }
+
+  .members,
+  .daily,
+  .message {
+    grid-column: 1 / span 1;
+  }
+
+  .mobile,
+  .activity,
+  .settings {
+    grid-column: 2 / span 1;
+  }
+}
+
+.traffic {
+  background-color: green;
+}
+
+.daily {
+  background-color: orange;
+}
+
+.mobile {
+  background-color: yellow;
+}
+
+.social-stats {
+  background-color: lightblue;
+}
+
+.members {
+  background-color: lightcoral;
+}
+
+.activity {
+  background-color: lightsteelblue;
+}
+
+.message {
+  background-color: lightyellow;
+}
+.settings {
+  background-color: lavenderblush;
+}

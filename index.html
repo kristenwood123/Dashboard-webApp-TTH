@@ -5,32 +5,33 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="./css/styles.css">
   <title>Document</title>
 </head>
-<body>
+<body class='grid-container'>
   <!----------------- Header ------------------>
   <header>
     <h1><span>Web</span>App</h1>
     <div class='bell-icon-container'>
-      <img src="./svgs/bell.svg" alt="bell icon">
+      <!-- <img src="./svgs/bell.svg" alt="bell icon"> -->
       <div id=#notifications></div>
     </div>
-    <img src="./images/member-1.jpg" alt="student">
+    <!-- <img src="./images/member-1.jpg" alt="student"> -->
   </header>
 
   <!----------------- Navbar ------------------>
   <nav>
     <a href="#">
-      <img src="./svgs/home.svg" alt="">
+      <!-- <img src="./svgs/home.svg" alt=""> -->
     </a>
     <a href="#">
-      <img src="./svgs/bar-chart.svg" alt="">
+      <!-- <img src="./svgs/bar-chart.svg" alt=""> -->
     </a>
     <a href="#">
-      <img src="./svgs/members.svg" alt="">
+      <!-- <img src="./svgs/members.svg" alt=""> -->
     </a>
     <a href="#">
-      <img src="./svgs/settings.svg" alt="">
+      <!-- <img src="./svgs/settings.svg" alt=""> -->
     </a>
   </nav>
 <!----------------- Main ------------------>
@@ -190,6 +191,32 @@
       </div>
     </div>
   </section>
+
+    <!----------------- Messaging ------------------>
+    <section class="message">
+      <h3>Message User</h3>
+
+      <form class="widget-container">
+        <input type="text" placeholder='Search for user' class='form-field' id='userField'>
+        <textarea placeholder='Message for user' class='form-area' id='messageField'></textarea>
+        <button class='button-primary' id='send'>Send</button>
+      </form>
+    </section>
+<!----------------- Settings ------------------>
+      <section class="settings">
+        <h3>Settings</h3>
+      <!-- Custom CSS Toggle -->
+      <!-- Custom CSS Toggle -->
+        <select id="timezone" class="form-field">
+          <option disabled selected>Select a Timezone</option>
+          <option>Eastern</option>
+          <!-- Insert more options -->
+        </select>
+        <div class="settings-button">
+          <button class="button-primary" id='save'>Save</button>
+          <button class="button-disabled" id='cancel'>Cancel</button>
+        </div>
+      </section>
   </main>
 </body>
 </html>
