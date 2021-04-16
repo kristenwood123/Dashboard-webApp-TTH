@@ -11,8 +11,8 @@ const send = document.getElementById('send')
 
 alertBanner.innerHTML = 
 `<div class='alert-banner'>
-  <p><strong>Alert:</strong> You have <strong>6</strong> overdue tasks to complete</p>
-  <p class='alert-banner-close'>x</p>
+  <p><strong>Alert:</strong> You have unread messages</p>
+  <p class='alert-banner-close'>X</p>
   </div>
 `
 
@@ -56,7 +56,7 @@ let trafficChart = new Chart(trafficCanvas, {
 })
 
 const dailyData = {
-  lables : ["S", "M","T","W","T","F","S"],
+  labels : ["S", "M","T","W","T","F","S"],
   datasets: [{
     label: '# of Hits',
     data: [75, 115, 175, 125, 225, 200, 100],
