@@ -11,7 +11,7 @@
   --color-light-purple: rgb(133, 126, 231);
   --color-dark-purple: rgb(69, 65, 121);
   --color-light-green: rgb(118, 201, 118);
-  --color-light-gray-line: rgb(216, 214, 214);
+  --color-light-gray-line: rgb(230, 228, 228);
   --color-light-gray-background: rgb(243, 242, 242);
 }
 
@@ -89,11 +89,6 @@ header img {
   font-size: 10px;
 }
 
-@media screen and (min-width: 768px) {
-  .header-student p {
-    font-size: 16px;
-  }
-}
 /* End Header -------------------------------------- */
 
 /* Nav -------------------------------------- */
@@ -114,20 +109,23 @@ nav img {
 
 /* Dashboard Header -------------------------------------- */
 main {
+  display: grid;
   grid-area: main;
   background-color: white;
+}
+.main-container {
+  display: grid;
+}
+.container {
+  width: 95%;
+  margin: 0 auto;
+  display: grid;
 }
 
 .main-header {
   display: flex;
   flex-direction: column;
   margin-top: 1em;
-}
-
-.container {
-  width: 95%;
-  margin: 0 auto;
-  display: grid;
 }
 
 .headline {
@@ -142,13 +140,12 @@ main {
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
-  width: 90%;
+  width: 100%;
   font-size: 15px;
   font-weight: 200;
   border-radius: 6px;
   height: 45px;
-  margin-top: 40px;
-  margin-bottom: 30px;
+  margin-top: 40px 0px 30px 0px;
 }
 
 .alert-banner p {
@@ -169,7 +166,7 @@ main {
 /* Traffic -------------------------------------- */
 .uppercase {
   text-transform: uppercase;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 400;
   letter-spacing: 1px;
 }
@@ -192,6 +189,7 @@ main {
 
 .traffic-nav li {
   color: black;
+  margin: 15px;
 }
 
 .traffic-nav li:first-child {
@@ -236,16 +234,23 @@ main {
   width: 30px;
   margin-right: 10px;
 }
+.social-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 .social-container {
   background-color: var(--color-light-gray-background);
   border: 1px solid var(--color-light-gray-line);
   border-radius: 6px;
+  margin: 8px;
+  height: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 1em;
-  height: 80px;
+  min-width: 300px;
+  max-width: 450px;
 }
 
 .social-text p:first-child {
@@ -309,7 +314,8 @@ main {
 }
 
 input[type],
-textarea {
+textarea,
+select {
   background-color: var(--color-light-gray-background);
   border: 1px solid var(--color-light-gray-line);
   border-radius: 6px;
@@ -321,7 +327,7 @@ textarea {
   height: 100px;
 }
 
-button {
+.button-primary {
   background-color: var(--color-light-purple);
   border: 1px solid var(--color-light-gray-line);
   color: white;
@@ -329,6 +335,14 @@ button {
   border-radius: 6px;
   height: 40px;
   margin-bottom: 15px;
+}
+
+input::placeholder,
+textarea::placeholder {
+  padding-left: 10px;
+  color: rgb(185, 184, 184);
+  font-size: 16px;
+  font-weight: 200;
 }
 
 /* End Messaging  ------------------------------------------------ */
@@ -349,6 +363,10 @@ button {
       "navigation main";
   }
 
+  .header-student p {
+    font-size: 16px;
+  }
+
   nav {
     display: flex;
     flex-direction: column;
@@ -364,9 +382,43 @@ button {
   main {
     grid-template-columns: 50% 1fr;
   }
+  /* Social-stats ------------------------------------------------------------- */
+  .social-wrapper {
+    flex-direction: row;
+  }
 
+  .social-container {
+    width: 100px;
+  }
+  /* End Social-states ------------------------------------------------------ */
+  /* Members------------------------------------------------------- */
+  .members-container {
+    flex-direction: row;
+    align-items: flex-start;
+    margin-top: 20px;
+    font-weight: 200;
+    font-size: 17px;
+    align-items: center;
+    padding-bottom: 20px;
+  }
+
+  .members-text {
+    text-align: left;
+    margin-left: 20px;
+  }
+  .members-container img {
+    width: 60px;
+  }
+  .date {
+    padding-bottom: 15px;
+    align-self: flex-end;
+    justify-self: flex-end;
+    margin-left: auto;
+  }
+  /* End Members------------------------------------------------------- */
   .traffic,
-  .social-stats {
+  .social-stats,
+  .main-header {
     grid-column: 1 / span 2;
   }
 
