@@ -3,6 +3,8 @@
   padding: 0;
   margin: 0;
   font-family: var(--font-family);
+  width: 100%;
+  overflow-x: hidden;
 }
 
 :root {
@@ -39,6 +41,12 @@
 .widget-container-full,
 .wdiget-container-half {
   width: 95vw;
+  margin: 0 auto;
+}
+
+.container {
+  width: 98%;
+  margin: 0 auto;
 }
 /* Header -------------------------------------- */
 header {
@@ -68,6 +76,25 @@ header h1 {
   fill: white;
 }
 
+.circle {
+  fill: var(--color-light-green);
+  position: relative;
+  margin: 0 auto;
+  left: 55px;
+  top: 9px;
+  width: 35px;
+  z-index: 99;
+  cursor: pointer;
+}
+
+.bell-icon:hover {
+  transform: scale(1.1);
+  transition: 0.3s ease-out;
+}
+
+circle {
+  max-width: 10%;
+}
 header img {
   width: 40px;
   border-radius: 50%;
@@ -111,15 +138,7 @@ nav img {
 main {
   display: grid;
   grid-area: main;
-  background-color: white;
-}
-.main-container {
-  display: grid;
-}
-.container {
-  width: 95%;
-  margin: 0 auto;
-  display: grid;
+  width: 100%;
 }
 
 .main-header {
@@ -145,7 +164,6 @@ main {
   font-weight: 200;
   border-radius: 6px;
   height: 45px;
-  margin-top: 40px 0px 30px 0px;
 }
 
 .alert-banner p {
@@ -311,6 +329,7 @@ main {
   display: flex;
   flex-direction: column;
   margin-top: 10px;
+  margin: 0 auto;
 }
 
 input[type],
@@ -431,6 +450,7 @@ textarea::placeholder {
 
   .widget-container-full {
     width: 90vw;
+    margin: 0 auto;
   }
   .widget-container-half {
     width: 45vw;

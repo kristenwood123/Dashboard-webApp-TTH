@@ -8,7 +8,6 @@ const message = document.getElementById('messageField')
 const send = document.getElementById('send')
 
 
-
 alertBanner.innerHTML = 
 `<div class='alert-banner'>
   <p><strong>Alert:</strong> You have unread messages</p>
@@ -27,8 +26,10 @@ let trafficData = {
   labels: ["16-22", "23-29", "30-5", "6-12", "13-19", "20-26", "27-3", "4-10", "11-17", "18-24", "25-31"],
   datasets: [{
     data: [750, 1250, 1000, 2000, 1500, 1750, 1250, 1850, 2250, 1500, 2500],
-  backgroundColor: 'rgba(116, 119, 191, .3)',
-  borderWidth: 1,
+  backgroundColor: 'rgba(133, 126, 231, 0.3)',
+  borderWidth: 2,
+  fill: 'origin',
+  tension: 0.4
    }]
 }
 
@@ -37,7 +38,7 @@ let trafficOptions = {
   animation: {
     duration: 0
   },
-  scales : {
+  scales: {
     y: { 
       beginAtZero: true
     }
@@ -53,7 +54,7 @@ let trafficChart = new Chart(trafficCanvas, {
   type: 'line',
   data: trafficData,
   options: trafficOptions
-})
+});
 
 const dailyData = {
   labels : ["S", "M","T","W","T","F","S"],
@@ -84,8 +85,10 @@ let dailyChart = new Chart(dailyCanvas, {
   options: dailyOptions
 })
 
+
+// Doughnut chart
 const mobileData = {
-  lables: ["Desktop", "Tablet", "Phones"],
+  labels: ["Desktop", "Tablet", "Phones"],
   datasets: [{
     label: '# of Users',
     data: [2000, 550, 500],
@@ -94,7 +97,8 @@ const mobileData = {
       '#7477Bf',
       '#78CF82',
       '#51B6C8'
-    ]
+    ],
+    hoverOffset: 4
   }]
 }
 
@@ -108,13 +112,13 @@ const mobileOptions = {
       }
     }
   }
-}
+};
 
 let mobileChart = new Chart(mobileCanvas, {
   type: 'doughnut',
   data: mobileData,
   options: mobileOptions
-})
+});
 
 send.addEventListener('click', () => {
   if(user.value === "" && message.value === "") {
@@ -124,6 +128,6 @@ send.addEventListener('click', () => {
   } else if (message.value === "") {
     alert('Please fill out message field before sending')
   } else {
-    alert(`Message successfully setn to: ${user.value}`)
+    alert(`Message successfully sent to: ${user.value}`)
   }
 })
