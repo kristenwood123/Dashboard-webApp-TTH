@@ -76,6 +76,9 @@ header h1 {
 .bell-icon-container {
   margin-left: auto;
   margin-right: 10px;
+  display: flex;
+  justify-content: center;
+  justify-content: space-around;
 }
 
 .bell-icon {
@@ -84,21 +87,17 @@ header h1 {
 }
 
 .circle {
-  fill: var(--color-light-green);
+  background-color: var(--color-light-green);
   position: relative;
-  width: 25px;
-  z-index: 99;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
   cursor: pointer;
-  left: 20px;
 }
 
 .bell-icon:hover {
   transform: scale(1.1);
   transition: 0.3s ease-out;
-}
-
-circle {
-  max-width: 5%;
 }
 
 header img {
