@@ -62,8 +62,8 @@
       </div>
     </div>  
     <!----------------- Traffic ------------------>
-    <section class="traffic container">
-      <div class="traffic-header">
+    <section class="traffic">
+      <div class="traffic-header container">
         <h3 class='uppercase'>Traffic</h3>
         <ul class="traffic-nav">
             <li class="traffic-nav-link">Hourly</li>
@@ -75,10 +75,10 @@
       <div class="widget-container-full">
         <!-- Element line graph will attach to -->
         <canvas id='traffic-chart'>
-        </canvas>       
+        </canvas>  
       </div>
-    </section>
       <hr class="bottom-line">
+    </section>
     <!----------------- Daily Traffic ------------------>
     <section class="daily container">
       <h3 class='uppercase'>Daily Traffic</h3>
@@ -87,7 +87,7 @@
         <canvas id='daily-chart'></canvas>
       </div>
     </section>
-  <hr class="bottom-line">
+  <hr class="bottom-line ">
     <!----------------- Mobile Users ------------------>
       <section class="mobile container">
         <h3 class='uppercase'>Mobile Users</h3>
@@ -96,7 +96,7 @@
           <canvas id='mobile-chart'></canvas>
         </div>
       </section>
-        <hr class="bottom-line mobile-line">
+        <hr class="bottom-line traffic-bottom-line">
       <!----------------- Mobile Users ------------------>
       <section class='social-stats container'>
         <h3 class="uppercase">Social Stats</h3>
@@ -145,10 +145,10 @@
       </section>
         <hr class="bottom-line">
     <!----------------- New Members ------------------>
-  <section class='members container container'>
-      <h3 class='uppercase'>New Members</h3>
-
-        <div class='members-container'>
+    
+  <section class='members'>
+      <h3 class='uppercase container'>New Members</h3>
+        <div class='members-container container'>
           <img src="images/member-1.jpg" alt="profile-img">
           <div class="members-text">
             <p>Victoria Chambers</p>
@@ -156,8 +156,8 @@
           </div>
           <p class='date'>10/15/20</p>
         </div>
-          <hr class="bottom-line">
-        <div class='members-container'>
+          <hr class="mobile-bottom-line">
+        <div class='members-container container'>
           <img src="images/member-2.jpg" alt="profile-img">
           <div class="members-text">
             <p>Dale Byrd</p>
@@ -165,8 +165,8 @@
           </div>
           <p class='date'>10/15/20</p>
         </div>
-          <hr class="bottom-line">
-        <div class='members-container'>
+          <hr class="mobile-bottom-line">
+        <div class='members-container container'>
           <img src="images/member-3.jpg" alt="profile-img">
           <div class="members-text">
             <p>Dawn Wood</p>
@@ -174,8 +174,8 @@
           </div>
           <p class='date'>10/15/20</p>
         </div>
-          <hr class="bottom-line">
-        <div class='members-container'>
+          <hr class="mobile-bottom-line">
+        <div class='members-container container'>
           <img src="images/member-4.jpg" alt="profile-img">
           <div class="members-text">
             <p>Dan Oliver</p>
@@ -184,12 +184,11 @@
           <p class='date'>10/15/20</p>
         </div>
       </section>
-  <hr class="bottom-line">
+    <hr class="bottom-line">
     <!----------------- Recent Activity ------------------>
-    <section class='activity container'>
-      <h3 class='uppercase'>Recent Activity</h3>
-    
-      <div class='members-container'>
+    <section class='activity'>
+      <h3 class='uppercase container'>Recent Activity</h3>
+      <div class='members-container container'>
         <img src="images/member-1.jpg" alt="profile-img">
         <div class="members-text">
           <p>Victoria Chambers commented on <span class='bold'>WebApp's SEO Tips</span></p>
@@ -197,8 +196,8 @@
         </div>
         <p class='arrow'>></p>
       </div>
-      <hr class="bottom-line">
-      <div class='members-container'>
+      <hr class="mobile-bottom-line">
+      <div class='members-container container'>
         <img src="images/member-2.jpg" alt="profile-img">
         <div class="members-text">
           <p>Dale Byrd liked the post <span class='bold'>Facebook's Changes for 2021</span></p>
@@ -206,8 +205,8 @@
         </div>
         <p class='arrow'>></p>
       </div>
-    <hr class="bottom-line">
-      <div class='members-container'>
+    <hr class="mobile-bottom-line">
+      <div class='members-container container'>
         <img src="images/member-3.jpg" alt="profile-img">
         <div class="members-text">
           <p>Dawn Wood commented on <span class='bold'>Facebook's Changes for 2021</span></p>
@@ -215,8 +214,8 @@
         </div>
         <p class='arrow'>></p>
       </div>
-        <hr class="bottom-line">
-      <div class='members-container'>
+        <hr class="mobile-bottom-line">
+      <div class='members-container container'>
         <img src="images/member-4.jpg" alt="profile-img">
         <div class="members-text">
           <p>Dan Oliver posted <span class='bold'>WebApp's SEO Tips</span></p>
@@ -236,7 +235,7 @@
           <button class='button-primary' id='send'>Send</button>
         </form>
       </section>
-        <hr class="bottom-line">
+        <hr class="bottom-line mobile-bottom-line">
   <!----------------- Settings ------------------>
         <section class="settings container">
           <h3 class='uppercase'>Settings</h3>
@@ -265,7 +264,6 @@
             <button class="button-disabled" id='cancel'>Cancel</button>
           </div>
         </section>
-          <hr class="bottom-line">
       </div>
   </main>
   <script src='app.js'></script>
