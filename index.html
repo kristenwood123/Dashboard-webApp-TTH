@@ -78,11 +78,9 @@
       <div class="widget-container-full">
         <!-- Element line graph will attach to -->
         <canvas id='traffic-chart'>
-
-        </canvas>
+        </canvas>       
       </div>
     </section>
-    <hr class="bottom-line">
     <!----------------- Daily Traffic ------------------>
     <section class="daily container">
       <h3 class='uppercase'>Daily Traffic</h3>
@@ -100,7 +98,7 @@
           <canvas id='mobile-chart'></canvas>
         </div>
       </section>
-        <hr class="bottom-line">
+        <hr class="bottom-line mobile-line">
       <!----------------- Mobile Users ------------------>
       <section class='social-stats container'>
         <h3 class="uppercase">Social Stats</h3>
@@ -111,6 +109,9 @@
                 <svg class='outer' viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path class='inner'
                     d="M23.998 12c0-6.628-5.372-12-11.999-12C5.372 0 0 5.372 0 12c0 5.988 4.388 10.952 10.124 11.852v-8.384H7.078v-3.469h3.046V9.356c0-3.008 1.792-4.669 4.532-4.669 1.313 0 2.686.234 2.686.234v2.953H15.83c-1.49 0-1.955.925-1.955 1.874V12h3.328l-.532 3.469h-2.796v8.384c5.736-.9 10.124-5.864 10.124-11.853z" />
+                </svg>
+                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                  <circle class='purple-circle' cx="50" cy="50" r="50" />
                 </svg>
               </div>
               <div class="social-text">
@@ -198,6 +199,7 @@
           <p>Victoria Chambers commented on <span class='bold'>WebApp's SEO Tips</span></p>
           <p>4 hours ago</p>
         </div>
+        <p class='arrow'>></p>
       </div>
       <hr class="bottom-line">
       <div class='members-container'>
@@ -206,6 +208,7 @@
           <p>Dale Byrd liked the post <span class='bold'>Facebook's Changes for 2021</span></p>
           <p>5 hours ago</p>
         </div>
+        <p class='arrow'>></p>
       </div>
     <hr class="bottom-line">
       <div class='members-container'>
@@ -214,6 +217,7 @@
           <p>Dawn Wood commented on <span class='bold'>Facebook's Changes for 2021</span></p>
           <p>4 hours ago</p>
         </div>
+        <p class='arrow'>></p>
       </div>
         <hr class="bottom-line">
       <div class='members-container'>
@@ -222,6 +226,7 @@
           <p>Dan Oliver posted <span class='bold'>WebApp's SEO Tips</span></p>
           <p>1 day ago</p>
         </div>
+        <p class='arrow'>></p>
       </div>
     </section>
       <hr class="bottom-line">
@@ -240,10 +245,17 @@
         <section class="settings container">
           <h3 class='uppercase'>Settings</h3>
             <div class="toggle-container">
+              <div class="toggle2-container">
               <p>Send Email Notifications</p>
-              <button class='toggle'></button>
+              <input type="checkbox" id="toggle" class="checkbox" />
+              <label for="toggle" class="switch"></label>
+              </div>
+              
+              <div class="toggle2-container">
               <p>Set Profile to Public</p>
-              <button class='toggle'></button>
+                <input type="checkbox" id="toggle" class="checkbox" />
+                <label for="toggle" class="switch"></label>
+              </div>
             </div>
           <select id="timezone" class="form-field">
             <option disabled selected>Select a Timezone</option>
