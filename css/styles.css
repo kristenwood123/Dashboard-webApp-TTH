@@ -520,6 +520,18 @@ select {
     display: flex;
   }
 
+  .daily,
+  .mobile {
+    border-top: 2px solid var(--color-light-gray-line);
+  }
+
+  .daily {
+    border-right: 2px solid var(--color-light-gray-line);
+  }
+
+  .mobile {
+    padding-left: 10px;
+  }
   /* Social-stats ------------------------------------------------------------- */
   .social-wrapper {
     flex-direction: row;
