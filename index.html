@@ -143,9 +143,8 @@
           </div>
         </div>
       </section>
-        <hr class="bottom-line">
+        <hr class="bottom-line hide">
     <!----------------- New Members ------------------>
-    
   <section class='members'>
       <h3 class='uppercase container'>New Members</h3>
         <div class='members-container container'>
@@ -184,7 +183,7 @@
           <p class='date'>10/15/20</p>
         </div>
       </section>
-    <hr class="bottom-line">
+    <hr class="bottom-line hide">
     <!----------------- Recent Activity ------------------>
     <section class='activity'>
       <h3 class='uppercase container'>Recent Activity</h3>
@@ -224,42 +223,43 @@
         <p class='arrow'>></p>
       </div>
     </section>
-      <hr class="bottom-line">
+      <hr class="bottom-line hide">
       <!----------------- Messaging ------------------>
-      <section class="message container">
-        <h3 class='uppercase'>Message User</h3>
-
-        <form class="widget-container">
+      <section class="message">
+        <h3 class='uppercase container'>Message User</h3>
+        <form class="widget-container container">
           <input type="text" placeholder='Search for user' class='form-field' id='userField'>
           <textarea placeholder='Message for user' class='form-area' id='messageField'></textarea>
           <button class='button-primary' id='send'>Send</button>
         </form>
       </section>
-        <hr class="bottom-line mobile-bottom-line">
+        <hr class="bottom-line mobile-bottom-line hide">
   <!----------------- Settings ------------------>
-        <section class="settings container">
-          <h3 class='uppercase'>Settings</h3>
-            <div class="toggle-container">
+        <section class="settings">
+          <h3 class='uppercase container'>Settings</h3>
+            <div class="toggle-container container">
+
               <div class="toggle2-container">
-              <p>Send Email Notifications</p>
-              <input type="checkbox" id="toggle" class="checkbox" />
-              
-              <label for="toggle" class="switch"></label>
-              </div>
-              
-              <div class="toggle2-container">
-              <p>Set Profile to Public</p>
+                <p>Send Email Notifications</p>
                 <input type="checkbox" id="toggle" class="checkbox" />
-          
-                <label for="toggle" class="switch"></label>           
+                <label for="toggle" class="offBtn">OFF</label>
+                <label for="toggle" class="onBtn">ON</label>
               </div>
+              
+              <div class="toggle2-container">
+                <p>Set Profile to Public</p>
+                <input type="checkbox" id="toggle" class="checkbox" />  
+                <label for="toggle" class="offBtn">OFF</label>           
+                <label for="toggle" class="onBtn">ON</label>           
+              </div>
+
             </div>
-          <select id="timezone" class="form-field">
-            <option disabled selected>Select a Timezone</option>
+          <select id="timezone" class="form-field container">
+            <option disabled selected class='container'>Select a Timezone</option>
             <option>Eastern</option>
             <!-- Insert more options -->
           </select>
-          <div class="settings-button">
+          <div class="settings-button container">
             <button class="button-primary" id='save'>Save</button>
             <button class="button-disabled" id='cancel'>Cancel</button>
           </div>
