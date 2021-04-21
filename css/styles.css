@@ -406,7 +406,7 @@ input[type="checkbox"] {
   position: relative;
   width: 100px;
   height: 40px;
-  background-color: var(--color-light-purple);
+  background-color: var(--color-light-gray-background);
   -webkit-appearance: none;
   border-radius: 20px;
   outline: none;
@@ -416,7 +416,7 @@ input[type="checkbox"] {
 }
 
 input:checked[type="checkbox"] {
-  background: var(--color-light-gray-background);
+  background: var(--color-light-purple);
   border: 2px solid rgb(172, 167, 167);
 }
 
@@ -446,10 +446,14 @@ select {
 .toggle-container {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
 }
 
 .toggle2-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.toggle3-container {
   position: relative;
   display: inline;
 }
@@ -460,16 +464,16 @@ label[for="toggle"] {
   font-size: 15px;
 }
 
-.offBtn {
-  bottom: 15px;
-  left: 10px;
-  color: gray;
-}
-
 .onBtn {
   bottom: 15px;
-  left: 60px;
+  left: 10px;
   color: white;
+}
+
+.offBtn {
+  bottom: 15px;
+  left: 64px;
+  color: gray;
 }
 
 .settings-button {
@@ -534,6 +538,10 @@ label[for="toggle"] {
 
   .bottom-line {
     width: 200%;
+  }
+
+  .toggle2-container {
+    width: 50%;
   }
 
   nav {
@@ -648,7 +656,6 @@ label[for="toggle"] {
     flex-direction: column;
   }
 
-  input[type],
   label[for] {
     margin-right: 60%;
   }
