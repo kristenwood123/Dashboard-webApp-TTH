@@ -311,6 +311,7 @@ main {
   color: gray;
   font-weight: 200;
 }
+
 .social-image {
   background-color: var(--color-light-purple);
   height: 50px;
@@ -698,6 +699,10 @@ label[for="toggle"] {
     width: 100%;
   }
 
+  .activity .members-container {
+    padding-bottom: 2px;
+  }
+
   .hide {
     display: none;
   }
@@ -710,6 +715,10 @@ label[for="toggle"] {
 
   label[for] {
     margin-right: 200px;
+  }
+
+  .toggle2-container {
+    width: 60%;
   }
 
   .social-stats {
@@ -734,5 +743,11 @@ label[for="toggle"] {
   .settings {
     grid-column: 2 / 3;
     grid-row: 8 / 11;
+  }
+}
+
+@media screen and (min-width: 1098px) {
+  .activity .members-container {
+    padding-bottom: 20px;
   }
 }
